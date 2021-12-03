@@ -1,0 +1,1625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <link rel="stylesheet" href="./style.css" type="text/css" />
+  <title>pyprof2html - eps0.03.prof</title><script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript" id="js">
+  $(document).ready(function() {
+      $("tr").mouseover(function() {
+          $(this).addClass("hover");
+          }).mouseout(function() {
+          $(this).removeClass("hover");
+          });
+  });</script></head>
+
+<body>
+  
+  <div class="content">
+
+    <div class="header">
+        <div class="header-title"><a href="./index.html">Profile Report</a></div>
+        <div class="header-time">
+          Profile Time on <strong>Fri Dec  3 11:17:48 2021</strong><br/>
+          Reported Time on <strong>Fri Dec  3 11:18:04 2021</strong>
+        </div>
+    </div>
+
+    <div class="profile-info">
+        <h2>Profile Info</h2>
+        <p>
+        Profile Data Type: <span class="bold">cProfile</span><br/>
+        Total Time: <span class="bold"> 82.9847</span> CPU second<br/>
+        Total Func Call: <span class="bold">2322</span> function calls
+        </p>
+    </div>
+
+    <hr/>
+
+    <div class="profile-table">
+        <h2>Function Caller Table&nbsp;&nbsp;
+        <a href="index.html">All function&nbsp;&raquo;</a>
+        </h2>
+
+    <table class="prof">
+      <thead>
+        <tr>
+        <th style="width:250px;" class="prof" align="center"
+        ><span title="provides the respective data of each function"
+        >Dest filename:lineno(function)</span></th>
+        <th class="prof"><span title="for the number of calls"
+                               >ncalls</span></th>
+        <th class="prof"
+        ><span title="for the total time spent in the given
+ function (and excluding time made in calls to sub-functions)"
+        >tottime</span></th>
+        <th class="prof"
+        ><span title="total time spent in this and all
+ subfunctions (from invocation till exit).
+ This figure is accurate even for recursive functions.">cumtime</span></th>
+        <th style="width:250px;" class="prof" align="center"
+        ><span title="provides the respective data of each function"
+        >Orig filename:lineno(function)</span></th>
+        </tr>
+      </thead>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">Remove_extra_plants_from_pointcloud.py:151(main)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_1e535b2bc75657087dfc4220c05017c3" title="Remove_extra_plants_from_pointcloud.py:151(main)">1</span></td><td class="profdata" style="background-color:#ff3333"> 82.9307</td>
+            <td class="profdata" style="background-color:#ff3333"> 82.9840</td>
+            <td class="prof" style="width:300px;">&lt;string&gt;:1(&lt;module&gt;)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method open3d.cpu.pybind.io.write_point_cloud}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_81e15614a76b4ae2bb8b7da299330063" title="{built-in method open3d.cpu.pybind.io.write_point_cloud}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0244</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0244</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:99(save_plant_array_to_ply)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method open3d.cpu.pybind.io.read_point_cloud}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_bc5bd29a1d56cb46847c18069f23bbe1" title="{built-in method open3d.cpu.pybind.io.read_point_cloud}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0236</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0236</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="3">{built-in method numpy.core._multiarray_umath.implement_array_function}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_8aecfbaa2e063e36902c92e8a72b72df" title="{built-in method numpy.core._multiarray_umath.implement_array_function}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0017</td>
+            <td class="prof" style="width:300px;">&lt;__array_function__ internals&gt;:2(column_stack)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0017</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0017</td>
+            <td class="prof" style="width:300px;">&lt;__array_function__ internals&gt;:2(concatenate)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0011</td>
+            <td class="prof" style="width:300px;">&lt;__array_function__ internals&gt;:2(delete)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/function_base.py:4382(delete)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_7a64f966260b0fa6d028990602469317" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/function_base.py:4382(delete)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0010</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0011</td>
+            <td class="prof" style="width:300px;">{built-in method numpy.core._multiarray_umath.implement_array_function}</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">Remove_extra_plants_from_pointcloud.py:99(save_plant_array_to_ply)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_f64c394be33c695e5725848feb0f9f5d" title="Remove_extra_plants_from_pointcloud.py:99(save_plant_array_to_ply)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0010</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0259</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">&lt;string&gt;:1(&lt;module&gt;)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_a5279e6976dbb356d3193ec8b913dc14" title="<string>:1(<module>)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0007</td>
+            <td class="profdata" style="background-color:#ff3333"> 82.9846</td>
+            <td class="prof" style="width:300px;">{built-in method builtins.exec}</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{built-in method numpy.array}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_853bc1983cda2499a6590c7a5ce1724b" title="{built-in method numpy.array}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/shape_base.py:612(column_stack)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0002</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0002</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{built-in method posix.stat}</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_721d3a43869a289f23312bfb28c7cc97" title="{built-in method posix.stat}">24</span></td><td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/genericpath.py:16(exists)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/genericpath.py:39(isdir)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="4">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:71(join)</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_f15e5e89fb8f63501002b00df81ecaf4" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:71(join)">24</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:538(find)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:41(_iglob)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:99(save_plant_array_to_ply)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:538(find)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_3dcdd35cd1edb8dae88edce36e15415c" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:538(find)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0004</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:579(translation)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_fd278c22b26e5706d73c2162af4967ca" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:435(_parse_sub)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:212(_expand_lang)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_be113dea5a36de321a9cd9269a68f12e" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:212(_expand_lang)">12</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:538(find)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1255(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_2c8cf6f2f14397bade3e245a68d4c15e" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1255(__init__)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1567(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1638(__init__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_67645ade4e537c66b08d0730142f65de" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1638(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:16(get_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:670(__getitem__)</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_3cc8a5cc1604674ade6ebfdfd8f72ecd" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:670(__getitem__)">24</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/_collections_abc.py:657(get)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">12</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/shutil.py:1312(get_terminal_size)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="16">{built-in method builtins.isinstance}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_217f009098152e52bbc08f7a8452b30e" title="{built-in method builtins.isinstance}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:579(format)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/encodings/__init__.py:43(normalize_encoding)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:938(__and__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:38(_compile_pattern)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:147(has_magic)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">36</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:748(encode)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">33</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:41(_get_sep)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:117(splitext)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">38</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:270(escape)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">24</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:289(_compile)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/function_base.py:4382(delete)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:595(isstring)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffcc33">88</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:164(__getitem__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:224(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:921(fix_flags)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_a53a7073693e3f99d8ca66c5599d2fec" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1774(parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:289(_compile)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_8c38149c7f397f7cecf15b774b783226" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:289(_compile)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:188(match)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">19</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0002</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:250(compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:161(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_023ff2893402ad35e65057d24d151bc6" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:161(__init__)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2480(_get_formatter)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1308(register)</td><td class="profdata-arrow" style="background-color:#ffcc33"><span id="callers_7a18af24cd1de297fe9e0a848a3dae60" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1308(register)">72</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1255(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1638(__init__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:384(normalize)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_f622a95afb39c26529863425b9abcce2" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:384(normalize)">12</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:212(_expand_lang)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="17">{method &#39;append&#39; of &#39;list&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_31db7a804a0e17dd37bd49c0c0906f44" title="{method 'append' of 'list' objects}">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1388(add_argument_group)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1398(_add_action)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">18</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1478(_get_optional_kwargs)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1589(_add_action)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">8</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1877(consume_optional)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">30</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/encodings/__init__.py:43(normalize_encoding)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:48(filter)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">30</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:212(_expand_lang)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">36</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:538(find)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/shape_base.py:612(column_stack)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffcc33">84</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:71(_compile)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">5</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:536(_compile_info)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:598(_code)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">41</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:172(append)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:435(_parse_sub)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1478(_get_optional_kwargs)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_c4d631ea5995926cb97dff70eeec52c3" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1478(_get_optional_kwargs)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1638(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_1dfcb02b899362b42eb16d81345a7859" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1638(__init__)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0007</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:16(get_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:579(translation)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_22bf57cf4d023f0105c48b1b615d01d0" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:579(translation)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0004</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:660(dgettext)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/shutil.py:1312(get_terminal_size)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_255a2faa669bd0a6ffeb983e5b700900" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/shutil.py:1312(get_terminal_size)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:161(__init__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:71(_compile)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_45da6b6132d072c07f9df7a2e467637b" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:71(_compile)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:71(_compile)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:598(_code)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/encodings/__init__.py:43(normalize_encoding)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_fbc3931f1671e10c3084ebba81f30592" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/encodings/__init__.py:43(normalize_encoding)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:350(_replace_encoding)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:116(_iterdir)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_44694193d27f4fdfebe743c7d54ea88a" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:116(_iterdir)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:81(_glob1)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1774(parse_known_args)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_52099bbbab1a07b16f76022e3951d8a7" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1774(parse_known_args)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1767(parse_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1567(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_4e084cb645ca04cc1b6b25ac17f6cd5c" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1567(__init__)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1388(add_argument_group)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:748(encode)</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_9562fe48d4c24434bacee9edc8131269" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:748(encode)">36</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:670(__getitem__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/genericpath.py:16(exists)</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_bbe2e6e8483b2520080eadb126ef255d" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/genericpath.py:16(exists)">24</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:538(find)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:350(_replace_encoding)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_4465889631f07964a00a2f89f0c13f07" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:350(_replace_encoding)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:384(normalize)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="3">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:164(__getitem__)</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_68de715b33402f88f21d7266b3379920" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:164(__getitem__)">42</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:71(_compile)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:423(_simple)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">45</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:74(translate)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_697290604be3f947eb503069b57592b8" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:74(translate)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:38(_compile_pattern)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">Remove_extra_plants_from_pointcloud.py:16(get_args)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_728b8ad071b1dcc556416b20970456ca" title="Remove_extra_plants_from_pointcloud.py:16(get_args)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0005</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:99(save_plant_array_to_ply)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0004</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method builtins.print}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_3e87a0d1b1007c9df5056625485c7871" title="{built-in method builtins.print}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/_collections_abc.py:657(get)</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_1495ae9a627adde8af0050e8ece1f83f" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/_collections_abc.py:657(get)">24</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:538(find)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="3">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:233(__next)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_35573aec3d2bfc039f9d32b8dbdb89ea" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:233(__next)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:224(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:249(match)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">44</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:254(get)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:270(escape)</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_6e6dc968f80b6d8731fb00c6f149f176" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:270(escape)">38</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:74(translate)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1398(_add_action)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_ac21ab4a39b20d4d36d6af7ecf5bb0eb" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1398(_add_action)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1589(_add_action)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="3">{method &#39;match&#39; of &#39;re.Pattern&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_6739190bcda66b21d36f4498e9904382" title="{method 'match' of 're.Pattern' objects}">12</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1398(_add_action)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:48(filter)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:188(match)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:586(_format_args)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_7875e0e20ea855cae2cf85a2e6e7782a" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:586(_format_args)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/shape_base.py:612(column_stack)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_80c2d479fc8bf0fd978561237f3fe780" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/shape_base.py:612(column_stack)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0017</td>
+            <td class="prof" style="width:300px;">{built-in method numpy.core._multiarray_umath.implement_array_function}</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;startswith&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffcc33"><span id="callers_cdddee307e029451dd103bba072fc1ec" title="{method 'startswith' of 'str' objects}">76</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:71(join)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2358(_get_values)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_43793d0bc827de79d2098180b8b0da3c" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2358(_get_values)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1856(take_action)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="7">{method &#39;get&#39; of &#39;dict&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_a5233ec5e0e5ada3664d20b129b0539d" title="{method 'get' of 'dict' objects}">16</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1312(_registry_get)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1856(take_action)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:660(dgettext)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:350(_replace_encoding)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">18</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:384(normalize)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:71(_compile)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:355(_escape)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;endswith&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffcc33"><span id="callers_baaf892e8eba29f8365f84c7d2744894" title="{method 'endswith' of 'str' objects}">76</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:71(join)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1877(consume_optional)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_fde5f63fcb037a395cd906dc9699bc16" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1877(consume_optional)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method posix.scandir}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_61385101affe132fd107332df3026e85" title="{built-in method posix.scandir}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:116(_iterdir)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:174(getwidth)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_a8f87bc452563ca4f070a77de3af9022" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:174(getwidth)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:536(_compile_info)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:174(getwidth)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:254(get)</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_33659bca458aafa9a9d2b7337aaf8bcb" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:254(get)">43</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:861(_parse_flags)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1856(take_action)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_da61f15588b3f3dcc0cf09c85181bf96" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1856(take_action)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1877(consume_optional)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">&lt;__array_function__ internals&gt;:2(column_stack)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_c33440251593ffd008cb181d48e56e9e" title="<__array_function__ internals>:2(column_stack)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0018</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:660(dgettext)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_97eb935441dd27e97fb397fb9164cb9e" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:660(dgettext)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0004</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:735(gettext)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:172(append)</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_5931ca2ac78178682170d674b75a2429" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:172(append)">41</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="4">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:41(_get_sep)</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_5088c7492013833318a783b64ac24c72" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:41(_get_sep)">28</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:71(join)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:100(split)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:140(basename)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:150(dirname)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method posix.get_terminal_size}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_fd13cf262d53a55b05a7dd3974265005" title="{built-in method posix.get_terminal_size}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/shutil.py:1312(get_terminal_size)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="20">{built-in method builtins.len}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_a531858482942c42a7d525189a8a94d1" title="{built-in method builtins.len}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">12</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1478(_get_optional_kwargs)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1954(consume_positionals)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2084(_match_argument)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2106(_match_arguments_partial)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2358(_get_values)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:74(translate)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:100(split)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:150(dirname)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:289(_compile)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:71(_compile)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:423(_simple)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:536(_compile_info)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:81(groups)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">5</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:160(__len__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:286(tell)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:355(_escape)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:435(_parse_sub)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2084(_match_argument)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_81a1879e0b5fa6fee4c3ab13c0163ea4" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2084(_match_argument)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1877(consume_optional)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{method &#39;setdefault&#39; of &#39;dict&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffcc33"><span id="callers_6a83f7c2ce698c15d88e41f3de9c6e3f" title="{method 'setdefault' of 'dict' objects}">74</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1308(register)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">12</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1567(__init__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1518(_get_handler)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_369013285c6f120d81b3ab0c14e2e5de" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1518(_get_handler)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1255(__init__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1388(add_argument_group)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_6c775d77ba17551d7d6fae83c60db99c" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1388(add_argument_group)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1638(__init__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="4">{method &#39;replace&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_dcc5d6f5af18443276bdd1776edd9074" title="{method 'replace' of 'str' objects}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1478(_get_optional_kwargs)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">8</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2225(_get_nargs_pattern)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">12</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:384(normalize)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2480(_get_formatter)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_42c4c4d32e5fd4e7aaa81ff434b08090" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2480(_get_formatter)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;translate&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_6bb06d37bc9bd907275b8091fc0a4048" title="{method 'translate' of 'str' objects}">38</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:270(escape)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1589(_add_action)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_75b58e36934e44dc8e30c3c64a47dd06" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1589(_add_action)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1747(_add_action)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;encode&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_88d1f3a37979ff9599c4941da9be2645" title="{method 'encode' of 'str' objects}">36</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:748(encode)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="3">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:250(compile)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_58d726f330d8cca1db9311ea60a1871e" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:250(compile)">12</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:161(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1255(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0002</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:38(_compile_pattern)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:809(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_4c773711d33381c664c79e1abe526775" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:809(__init__)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:851(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1031(__init__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;find&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_e8a322477d415e720411517000f9eb33" title="{method 'find' of 'str' objects}">36</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:212(_expand_lang)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:759(compile)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_8b61cd67ef06b621618e7516f4cb57ad" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:759(compile)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0002</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:289(_compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="4">{built-in method builtins.hasattr}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_db7cb501a7ef018a85e3755664264206" title="{built-in method builtins.hasattr}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">8</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1774(parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/core/shape_base.py:207(_arrays_for_stack_dispatcher)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:140(basename)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_75613fc8ce7bc2a5e2566d366209ecf2" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:140(basename)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1638(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:81(_glob1)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_fedc16c880fa783fb924c1d7c209ad39" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:81(_glob1)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0003</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:41(_iglob)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:41(_iglob)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_c3c1875bc0350dd38a08560fb0ea2c1a" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:41(_iglob)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0003</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:10(glob)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method numpy.empty}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_254cec84405644abc0a0eee607ca2528" title="{built-in method numpy.empty}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/function_base.py:4382(delete)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="3">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1312(_registry_get)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_ae548add78017daf8f7c22e6fe002512" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1312(_registry_get)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1514(_pop_action_class)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2414(_get_value)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2414(_get_value)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_c3aa26319acfff82c455081dfaf73c8e" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2414(_get_value)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2358(_get_values)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:48(filter)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_5c93aeb40d0c629f74afc5234c924333" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:48(filter)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0002</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:81(_glob1)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:851(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_ec76e27747313a46b67dde24d9eaa00f" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:851(__init__)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;fileno&#39; of &#39;_io.TextIOWrapper&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_5b571966cd841de4ed1d621253b657ea" title="{method 'fileno' of '_io.TextIOWrapper' objects}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/shutil.py:1312(get_terminal_size)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/genericpath.py:39(isdir)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_5e8cafbb6ed17671a346fef963428ba9" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/genericpath.py:39(isdir)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:99(save_plant_array_to_ply)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="4">{built-in method builtins.min}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_d7c98e020858fbd53e13ab5887b460cc" title="{built-in method builtins.min}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:161(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:536(_compile_info)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:174(getwidth)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:435(_parse_sub)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_41e732a3c55608eb2e03bb70cc6b29cd" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:435(_parse_sub)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:937(parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1954(consume_positionals)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_659ae925663bf103602ab417f52bbb11" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1954(consume_positionals)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1514(_pop_action_class)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_9f316284c11890cb31e318388e44bf59" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1514(_pop_action_class)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:536(_compile_info)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_2ebd6574f715159da2ab3c42c0ad964f" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:536(_compile_info)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:598(_code)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/types.py:171(__get__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_7f1026a46baeaf9db5415e29c5075069" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/types.py:171(__get__)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:289(_compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{built-in method builtins.max}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_0a4ca3e67b100c52568289fa2514ec8e" title="{built-in method builtins.max}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:161(__init__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{built-in method builtins.setattr}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_0bb49fbf7e85c5f4602c4c37274486f4" title="{built-in method builtins.setattr}">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:880(__call__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1774(parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{built-in method numpy.asarray}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_f74c7af6b393151c982d05cc5ffce930" title="{built-in method numpy.asarray}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/function_base.py:4382(delete)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1747(_add_action)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_de9d36a167dca35d367c26cdfa55a7fa" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1747(_add_action)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;isalnum&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#66ff99"><span id="callers_5e342400d762a3a1d4ee9e16ee6c7891" title="{method 'isalnum' of 'str' objects}">30</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/encodings/__init__.py:43(normalize_encoding)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method builtins.getattr}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_06fd1641930e89f0150648ea187b5b0a" title="{built-in method builtins.getattr}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1518(_get_handler)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="6">{built-in method posix.fspath}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_081ad70426f2057e990ac633a2213beb" title="{built-in method posix.fspath}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:52(normcase)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">28</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:71(join)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:100(split)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:117(splitext)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:140(basename)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:150(dirname)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method numpy.core._multiarray_umath.normalize_axis_index}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_04427b1784696e6a46faedefba221393" title="{built-in method numpy.core._multiarray_umath.normalize_axis_index}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/function_base.py:4382(delete)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1527(_check_conflict)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_8ac8b7800486aac82fbf62664d9c8d99" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1527(_check_conflict)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1398(_add_action)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:10(glob)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_afa320793ce3cae183219b9cc9080303" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:10(glob)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0003</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">&lt;__array_function__ internals&gt;:2(delete)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_28356ae7d6dd20ee020a7aa695689733" title="<__array_function__ internals>:2(delete)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0011</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;index&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_1288f7af6b31b791f4ae282993baf5b7" title="{method 'index' of 'str' objects}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:350(_replace_encoding)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1031(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_7a6d693e8bd517cc2e16d8572226bf66" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1031(__init__)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:579(format)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_21d83e5a5e6ad75ceb6100b7b5729f0a" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:579(format)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:586(_format_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:570(_metavar_formatter)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_6ef6c321bf7ca77093787da958dc473e" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:570(_metavar_formatter)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:586(_format_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:735(gettext)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_b282709eb332108eaa8d0e8427cbdf2c" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:735(gettext)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0004</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1638(__init__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:461(_get_literal_prefix)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_1a377fc8d03f666e28a0f25d7653b5e2" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:461(_get_literal_prefix)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:461(_get_literal_prefix)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:536(_compile_info)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2122(_parse_optional)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_12747501f4dd7991cff2dbca85e38f05" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2122(_parse_optional)">8</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{method &#39;lower&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_fe0a3833b8c5de2725797046cd0881ba" title="{method 'lower' of 'str' objects}">12</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:350(_replace_encoding)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">12</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:384(normalize)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{method &#39;split&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_5304d073a72caae3845a57dcb57dc519" title="{method 'split' of 'str' objects}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:538(find)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/locale.py:384(normalize)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:100(split)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_096600620c342bc997cb83c172d85cf2" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:100(split)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:41(_iglob)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2225(_get_nargs_pattern)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_38f419a06cf3411f05cc36d517b04a99" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2225(_get_nargs_pattern)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2084(_match_argument)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:202(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_412d27b81b371e0210b0071195565d38" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:202(__init__)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:161(__init__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">&lt;__array_function__ internals&gt;:2(concatenate)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_5f1587ebb274ffaea5bd22fcaee87f2b" title="<__array_function__ internals>:2(concatenate)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0017</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/shape_base.py:612(column_stack)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="4">{method &#39;rfind&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_38e67bcb405f41286b648b8d8c5b08f3" title="{method 'rfind' of 'str' objects}">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/genericpath.py:121(_splitext)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:100(split)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:140(basename)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:150(dirname)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:937(parse)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_be44a86348fb0d3150729e0252e8d9e7" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:937(parse)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:759(compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="3">{method &#39;join&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_3853938f0d5c2342ecf5f177fab1c235" title="{method 'join' of 'str' objects}">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:586(_format_args)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/encodings/__init__.py:43(normalize_encoding)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:752(decode)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_82c0651c8777780901a5ee624791cea7" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:752(decode)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:670(__getitem__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:147(has_magic)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_f80c48da2f09c69160da6b3e82cfd1a3" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:147(has_magic)">3</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:41(_iglob)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{built-in method builtins.ord}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_d349cf2de3eac7e7ac429c7ae1af00d7" title="{built-in method builtins.ord}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:355(_escape)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#66ff99">37</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:150(dirname)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_d4e8924cd39dbd67f0c26df19775a5bc" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:150(dirname)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;search&#39; of &#39;re.Pattern&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_9d2813a51b5b5fbc1d26c876311613ef" title="{method 'search' of 're.Pattern' objects}">3</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:147(has_magic)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2106(_match_arguments_partial)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_d1874af533d870a5e2ef0708c0a27e9d" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2106(_match_arguments_partial)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1954(consume_positionals)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{method &#39;pop&#39; of &#39;dict&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_25d0a16ebce0c81bc13e1ec9f77830d4" title="{method 'pop' of 'dict' objects}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1478(_get_optional_kwargs)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">6</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1514(_pop_action_class)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:355(_escape)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_f44db3327d8a96a9bfec7f97f3a36f7f" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:355(_escape)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:188(match)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_43d8d42c1d2a45df1a50d4f61194aeed" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:188(match)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2084(_match_argument)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:938(__and__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_1ec0a122695cfbf670aa140648171aec" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:938(__and__)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:289(_compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;decode&#39; of &#39;bytes&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_2578ed291937f1676409a65023f1dd6f" title="{method 'decode' of 'bytes' objects}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py:752(decode)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:23(iglob)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_0f08857df48850e0e65573e97ec3730c" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:23(iglob)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:10(glob)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:861(_parse_flags)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_8ef1833057314236266b54a35b3557d6" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:861(_parse_flags)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{built-in method builtins.callable}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_44ce57a85e6e5f96f0b3b1f9714571a3" title="{built-in method builtins.callable}">12</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1337(add_argument)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">4</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2414(_get_value)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:154(_ishidden)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_df9711d86aec0ecf948c135dea440439" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:154(_ishidden)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:81(_glob1)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:84(&lt;genexpr&gt;)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/shape_base.py:608(_column_stack_dispatcher)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_639a841667eef7e8fe2e5689e2bbaa28" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/shape_base.py:608(_column_stack_dispatcher)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">&lt;__array_function__ internals&gt;:2(column_stack)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:880(__call__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_2785a4728d381fcf10546192b1596f65" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:880(__call__)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1856(take_action)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;lstrip&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_b36d9f79fbd6e8fb4774d6faccd5e6d1" title="{method 'lstrip' of 'str' objects}">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1478(_get_optional_kwargs)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:117(splitext)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_d14cdaa397fad5d530b09a42773666a5" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:117(splitext)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:151(main)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1983(&lt;listcomp&gt;)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_42f7084ad7b3ba54c8e473dc753fbfd7" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1983(<listcomp>)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:598(_code)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_77607e0c54386bde21115274e974be92" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:598(_code)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:759(compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:84(&lt;genexpr&gt;)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_68fd21f7c83d2355160ffb5aa1338e5b" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:84(<genexpr>)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:48(filter)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:38(_compile_pattern)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_0cb1949354507cb90b50e4135e4f0e28" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:38(_compile_pattern)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0002</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:48(filter)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:224(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_01d1dcb144480e834342e875da101029" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:224(__init__)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:937(parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/core/shape_base.py:207(_arrays_for_stack_dispatcher)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_0e2ff04970e3a2b872424b123ea55dd2" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/core/shape_base.py:207(_arrays_for_stack_dispatcher)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/shape_base.py:608(_column_stack_dispatcher)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:313(__call__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_cc15a6834ac6ce323a745e6c35ccaf48" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:313(__call__)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:938(__and__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;remove&#39; of &#39;list&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_34bb550726178779e88b936d2bfe9e86" title="{method 'remove' of 'list' objects}">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2358(_get_values)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1759(_get_positional_actions)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_eb4ffd65f31f53963961068b9414efa4" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1759(_get_positional_actions)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:753(value)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_aa73303a52d8c0fd0fbfb6e73bf9510a" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:753(value)">6</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/types.py:171(__get__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1767(parse_args)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_1617c1f9336cf93202a4104189f49e04" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1767(parse_args)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+            <td class="prof" style="width:300px;">Remove_extra_plants_from_pointcloud.py:16(get_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;reverse&#39; of &#39;list&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_e6a450bf33f8a581eb02f21f54f31104" title="{method 'reverse' of 'list' objects}">12</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py:212(_expand_lang)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/genericpath.py:121(_splitext)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_06dd7d1aa6b7e3f9db9f51bddea9c492" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/genericpath.py:121(_splitext)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:117(splitext)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:286(tell)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_c6ca2351db8caccf8a9842b8bdd9fbbb" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:286(tell)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:435(_parse_sub)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:249(match)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_d21059378b4b003e779d845db8a1cb84" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:249(match)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:435(_parse_sub)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:160(__len__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_86df63a7c6ba86b946cd49fba783431a" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:160(__len__)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">3</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">{built-in method builtins.len}</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:492(_get_charset_prefix)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_53dd8eecbcc28edb3ef27a76bacedc34" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:492(_get_charset_prefix)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:536(_compile_info)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;group&#39; of &#39;re.Match&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_cabc37c35b1aa77b13507f9225bef239" title="{method 'group' of 're.Match' objects}">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2084(_match_argument)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;add&#39; of &#39;set&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_ed433eaa54e148b19207b4ee1bd82e30" title="{method 'add' of 'set' objects}">8</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1856(take_action)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:111(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_621cb127265b38c0c46993987c61118e" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:111(__init__)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:164(__getitem__)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">2</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="3">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:65(_combine_flags)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_5672684f9ebc591fe99e5e6f6fcb6334" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:65(_combine_flags)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:71(_compile)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:461(_get_literal_prefix)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:492(_get_charset_prefix)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:631(__new__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_900add102ee2940c1728972884bf4e61" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:631(__new__)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/enum.py:313(__call__)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:423(_simple)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_8c534d44a4d19cc78ca2e6593cec94f6" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:423(_simple)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:71(_compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:595(isstring)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_2eced46ccb053db535c728cb3e18161d" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:595(isstring)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py:289(_compile)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:759(compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1760(&lt;listcomp&gt;)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_19d2ef38fe236a03ddb2f74c5224623c" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1760(<listcomp>)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1759(_get_positional_actions)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:921(fix_flags)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_9b77153f4afd9ded181751bf27434416" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:921(fix_flags)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:937(parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method _sre.compile}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_c990763572da31dea6dbef3862aa11a9" title="{built-in method _sre.compile}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:759(compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1240(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_dacb7f4dc7abee697a164389a635972c" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1240(__init__)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1774(parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:76(__init__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_cf9ff261d3cba50ebc3ce539c80dcde0" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:76(__init__)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:937(parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2440(_check_value)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_10319b03eab61ea9738b1e3adbfda6a4" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2440(_check_value)">4</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:2358(_get_values)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:604(&lt;listcomp&gt;)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_dc29a800d4b9263b9cae4229a8d9a764" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:604(<listcomp>)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:586(_format_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/function_base.py:4378(_delete_dispatcher)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_1cc2deab7d28928c4d6eb5a25d815fac" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/function_base.py:4378(_delete_dispatcher)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">&lt;__array_function__ internals&gt;:2(delete)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method numpy.asanyarray}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_a7d891d9c2725e3874d1ff6dc17775b5" title="{built-in method numpy.asanyarray}">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/lib/shape_base.py:612(column_stack)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:52(normcase)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_4c5b287ed1ef9db7fba881bacc733015" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:52(normcase)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py:48(filter)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:453(_get_iscased)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_76a2b411a65a4fa9bab2b383d1e50cce" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:453(_get_iscased)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:461(_get_literal_prefix)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:492(_get_charset_prefix)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{method &#39;extend&#39; of &#39;list&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_055aa8c33680cc8994d5f51324a65c16" title="{method 'extend' of 'list' objects}">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:461(_get_literal_prefix)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method _stat.S_ISDIR}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_1970705e72a1975bd953bb1e1e0eec24" title="{built-in method _stat.S_ISDIR}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/genericpath.py:39(isdir)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:81(groups)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_1171edc943dec3c9196605cff647e40b" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:81(groups)">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:759(compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="2">{method &#39;rstrip&#39; of &#39;str&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_56f32f62ec25a6c310e741e659386c53" title="{method 'rstrip' of 'str' objects}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:100(split)</td>
+          </tr>
+          <tr>
+            <td class="profdata-arrow" style="background-color:#ffffff">1</td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py:150(dirname)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:168(__setitem__)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_110baa106ae90bfa657d548dbe7bfa44" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:168(__setitem__)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py:493(_parse)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method builtins.iter}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_78d003ade2edc959dea8dc5d8710ab6e" title="{built-in method builtins.iter}">2</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py:1809(_parse_known_args)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/core/multiarray.py:148(concatenate)</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_988e1321a95cfa02eace13550bae77da" title="/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/site-packages/numpy/core/multiarray.py:148(concatenate)">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">&lt;__array_function__ internals&gt;:2(concatenate)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{method &#39;items&#39; of &#39;dict&#39; objects}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_384edb7755084d40a7c817ea08193462" title="{method 'items' of 'dict' objects}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py:759(compile)</td>
+          </tr>
+          <tr>
+            <td class="prof" style="width:300px;" rowspan="1">{built-in method sys.audit}</td><td class="profdata-arrow" style="background-color:#ffffff"><span id="callers_29f5b771aee6929f5eb29e9631211177" title="{built-in method sys.audit}">1</span></td><td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+            <td class="prof" style="width:300px;">/home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py:23(iglob)</td>
+          </tr>
+    </table>
+    </div>
+
+    <div id="footer">
+    <p>
+    Generated by
+    <a href="http://pypi.python.org/pypi/pyprof2html/">pyprof2html</a>: 0.3.2
+    &nbsp;&nbsp;&nbsp;Powered by <a href="http://www.python.org/">Python</a
+    > and <a href="http://jinja.pocoo.org/2/">Jinja2</a>
+    </p>
+    </div>
+
+  </div>
+
+</body></html>

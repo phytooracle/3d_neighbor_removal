@@ -1,4 +1,5 @@
 import os
+import cProfile
 from posixpath import basename 
 import sys 
 import alphashape
@@ -23,59 +24,31 @@ def get_args():
                         help='Input directory containing pointclouds',
                         metavar='str',
                         type=str,
-                        default='')
+                        #default=''
+                        default='/media/equant/7fe7f0a0-e17f-46d2-82d3-e7a8c25200bb/work/sandbox/3D/2020-02-29/combined_pointclouds/Kigalie_63/'
+    )
     
-    parser.add_argument('-o',
-                        '--outdir',
-                        help='Output directory for .ply files',
-                        metavar='str',
-                        type=str,
-                        default='')
+# This isn't used in the script, so I'm commenting it out [NPH]
+#    parser.add_argument('-o',
+#                        '--outdir',
+#                        help='Output directory for .ply files',
+#                        metavar='str',
+#                        type=str,
+#                        #default='',
+#    )
 
     parser.add_argument('-e',
                         '--eps',
                         help='EPS value for DBSCAN clustering',
                         metavar='eps',
                         type=float,
-                        default=0.07)
+                        #default=0.07,
+                        default=0.03,
+    )
     
     return parser.parse_args()
 
 # functions ----------------------------------------------------------------------------------------------------------
-
-def getIndexes(dfObj, value):
-    ''' Get index positions of value in dataframe i.e. dfObj.'''
-    listOfPos = list()
-    # Get bool dataframe with True at positions where the given value exists
-    result = dfObj.isin([value])
-    # Get list of columns that contains the value
-    seriesObj = result.any()
-    columnNames = list(seriesObj[seriesObj == True].index)
-    # Iterate over list of columns and fetch the rows indexes where value exists
-    for col in columnNames:
-        rows = list(result[col][result[col] == True].index)
-        for row in rows:
-            listOfPos.append((row, col))
-    # Return a list of tuples indicating the positions of value in the dataframe
-    return listOfPos
-
-def generate_pointcloud_ID(pcd_path):
-    plant_id = os.path.basename(os.path.dirname(pcd_path))
-    plant_id_split = plant_id.rsplit('_', 1) 
-    plant_genotype = plant_id_split[0]
-    plant_number = plant_id_split[1]
-    date = generate_date(pcd_path)
-    date_split = date.split('-')
-    year = date_split[2]
-    month = date_split[0]
-    day = date_split[1]
-    date_reordered = str(year + '-' + month + '-' + day)
-    return [date_reordered, year, month, day, plant_genotype, plant_number, pcd_path]
-
-def generate_date(path):
-    file_name = os.path.basename(os.path.dirname(os.path.dirname(path)))
-    date = file_name.split('_')[2]
-    return date
 
 def overlapped_shapes(shape_list):
     def iterable_overlap(list_):
@@ -133,7 +106,8 @@ def save_plant_array_to_ply(array, out_dir, out_file):
 
     o3d.io.write_point_cloud(os.path.join(out_dir, out_file + '_clustered.ply'), pcd)
     
-def generate_rotating_gif(array, gif_save_path, n_points=None, force_overwrite=False, scan_number=None):
+#def generate_rotating_gif(array, gif_save_path, n_points=None, force_overwrite=False, scan_number=None):
+def generate_rotating_gif(array, gif_save_path, n_points=7000, force_overwrite=False, scan_number=None):
 
     fig = plt.figure(figsize=(9,9))
     ax = fig.add_subplot(111, projection='3d')
@@ -177,8 +151,16 @@ def generate_rotating_gif(array, gif_save_path, n_points=None, force_overwrite=F
 def main():
     """Make a jazz noise here"""
 
+    #pr = cProfile.Profile()
+    #pr.enable()
+
     args = get_args()
     plant_pcd_filepaths = glob.glob(os.path.join(args.indir, '*combined_multiway_registered_plant.ply'))
+
+    if len(plant_pcd_filepaths) == 0:
+        raise ValueError(f"There were no pointclouds found in the input path provided ({args.indir})")
+
+    print(f"Found {len(plant_pcd_filepaths)} pointcloud/s to process...\n    {plant_pcd_filepaths}")
 
     for pcd in plant_pcd_filepaths:
         
@@ -201,7 +183,7 @@ def main():
         if len(dbscan_list) == 1:
             array = np.delete(labeled_pcd_array, 3, 1)
             save_plant_array_to_ply(array, out_dir, out_file)
-            generate_rotating_gif(array=array, gif_save_path=gif_path)
+            #generate_rotating_gif(array=array, gif_save_path=gif_path)
             continue
             
         max_test_list = []
@@ -213,15 +195,17 @@ def main():
         if len(max_test_list) == 1:
             array = np.delete(np.asarray(max_test_list[0]), 3, 1)
             save_plant_array_to_ply(array, out_dir, out_file)
-            generate_rotating_gif(array=array, gif_save_path=gif_path)
+            #generate_rotating_gif(array=array, gif_save_path=gif_path)
             continue
             
         shape_list = get_shapes(max_test_list)
         overlapped_array_list, overlapped_polygon_list = overlapped_shapes(shape_list)
         largest_sub_pcd = get_largest_pointcloud(overlapped_array_list)
         save_plant_array_to_ply(largest_sub_pcd, out_dir, out_file)
-        generate_rotating_gif(array=largest_sub_pcd, gif_save_path=gif_path)
+        #print(f"Generating rotating gif of largest_sub_pcd ({len(largest_sub_pcd)} points)")
+        #generate_rotating_gif(array=largest_sub_pcd, gif_save_path=gif_path)
 
-# run main ----------------------------------------------------------------------------------------------------
 if __name__ == '__main__':
-    main()
+    #main()
+    args = get_args()
+    #cProfile.run('main()', filename=f"eps{args.eps}.prof")

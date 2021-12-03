@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <link rel="stylesheet" href="./style.css" type="text/css" />
+  <title>pyprof2html - eps0.03.prof</title>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript" src="./jquery.tablesorter.min.js"></script>
+<script type="text/javascript" id="js">
+  $(document).ready(function() {
+      $("tr").mouseover(function() {
+          $(this).addClass("hover");
+          }).mouseout(function() {
+          $(this).removeClass("hover");
+          });
+  });
+  $(document).ready(function() {
+    $("table.prof").tablesorter({
+      headers: {5: {sorter: false}}
+    });
+    $('#iFilter').change(function(event) {
+       var v = $(this).val();
+
+       if (v == "") {
+          $("table.prof tbody tr").show();
+       } else {
+          $("table.prof tbody tr").hide();
+          $("table.prof tbody tr:contains('" + v + "')").show();
+       }
+    });
+  });</script>
+</head>
+
+<body>
+  
+  <div class="content">
+
+    <div class="header">
+        <div class="header-title"><a href="./index.html">Profile Report</a></div>
+        <div class="header-time">
+          Profile Time on <span class="bold">Fri Dec  3 11:20:45 2021</span><br/>
+          Reported Time on <span class="bold">Fri Dec  3 11:21:02 2021</span>
+        </div>
+    </div>
+
+    <div class="profile-info">
+      <h2>Profile Info</h2>
+      <p>Profile Data Type: <span class="bold">cProfile</span><br/>
+         Total Time: <span class="bold"> 79.5868</span> CPU second<br/>
+         Total Func Call: <span class="bold">1535</span
+                          > function calls</p>
+    </div>
+
+    <hr/>
+
+    <div class="profile-table">
+      <h2>Top 20 functions data&nbsp;&nbsp;&nbsp;<a href="index-all.html">all function&nbsp;&raquo;</a><div id="dFilter" title="filltering filename">filter:
+          <input id="iFilter" name="iFilter" type="text" size="50" value="" /></div>
+        </h2>
+
+    <table class="prof">
+      <thead>
+        <tr>
+        <th class="prof"><span title="for the number of calls">ncalls</span></th>
+        <th class="prof"
+        ><span title="for the total time spent in the given
+ function (and excluding time made in calls to sub-functions)"
+        >tottime</span></th>
+        <th class="prof"
+        ><span title="the quotient of tottime divided by ncalls"
+        >percall</span></th>
+        <th class="prof"
+        ><span title="total time spent in this and all
+ subfunctions (from invocation till exit).
+ This figure is accurate even for recursive functions.">cumtime</span></th>
+        <th class="prof"
+        ><span title="the quotient of cumtime divided by primitive calls"
+        >percall</span></th>
+        <th style="width:700px;" class="prof" align="center"
+        ><span title="provides the respective data of each function"
+        >filename:lineno(function)</span></th>
+        </tr>
+      </thead>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_1e535b2bc75657087dfc4220c05017c3">1</a></td>
+              <td class="profdata" style="background-color:#ff3333"> 79.5620</td>
+              <td class="profdata" style="background-color:#ff3333"> 79.5620</td>
+              <td class="profdata" style="background-color:#ff3333"> 79.5865</td>
+              <td class="profdata" style="background-color:#ff3333"> 79.5865</td>
+                <td class="prof" style="width:700px;">
+                     Remove_extra_plants_from_pointcloud.py :
+                     151 &#40;
+                     main&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_bc5bd29a1d56cb46847c18069f23bbe1">1</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0236</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0236</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0236</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0236</td>
+                <td class="prof">&lt;built-in method open3d.cpu.pybind.io.read_point_cloud&gt;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_a5279e6976dbb356d3193ec8b913dc14">1</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0004</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0004</td>
+              <td class="profdata" style="background-color:#ff3333"> 79.5868</td>
+              <td class="profdata" style="background-color:#ff3333"> 79.5868</td>
+                <td class="prof" style="width:700px;">
+                     &lt;string&gt; :
+                     1 &#40;
+                     &lt;module&gt;&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_853bc1983cda2499a6590c7a5ce1724b">1</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+                <td class="prof">&lt;built-in method numpy.array&gt;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_fd278c22b26e5706d73c2162af4967ca">1</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py :
+                     493 &#40;
+                     _parse&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_f15e5e89fb8f63501002b00df81ecaf4">15</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/posixpath.py :
+                     71 &#40;
+                     join&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_a86f727412ccc50532ce1f91cf9acd90">1</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ff3333"> 79.5868</td>
+              <td class="profdata" style="background-color:#ff3333"> 79.5868</td>
+                <td class="prof">&lt;built-in method builtins.exec&gt;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_3dcdd35cd1edb8dae88edce36e15415c">3</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0002</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py :
+                     538 &#40;
+                     find&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_721d3a43869a289f23312bfb28c7cc97">12</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof">&lt;built-in method posix.stat&gt;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ff3333"
+                ><a href="callers.html#callers_217f009098152e52bbc08f7a8452b30e">193</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof">&lt;built-in method builtins.isinstance&gt;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_be113dea5a36de321a9cd9269a68f12e">6</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/gettext.py :
+                     212 &#40;
+                     _expand_lang&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_45da6b6132d072c07f9df7a2e467637b">1</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_compile.py :
+                     71 &#40;
+                     _compile&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_67645ade4e537c66b08d0730142f65de">3</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0001</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py :
+                     1337 &#40;
+                     add_argument&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_44694193d27f4fdfebe743c7d54ea88a">4</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/glob.py :
+                     116 &#40;
+                     _iterdir&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ff3333"
+                ><a href="callers.html#callers_31db7a804a0e17dd37bd49c0c0906f44">205</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof">&lt;method &#39;append&#39; of &#39;list&#39; objects&gt;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffcc33"
+                ><a href="callers.html#callers_68de715b33402f88f21d7266b3379920">88</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/sre_parse.py :
+                     164 &#40;
+                     __getitem__&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_8c38149c7f397f7cecf15b774b783226">12</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0002</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/re.py :
+                     289 &#40;
+                     _compile&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_697290604be3f947eb503069b57592b8">1</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/fnmatch.py :
+                     74 &#40;
+                     translate&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#66ff99"
+                ><a href="callers.html#callers_3cc8a5cc1604674ade6ebfdfd8f72ecd">18</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/os.py :
+                     670 &#40;
+                     __getitem__&nbsp;&#41;</td>
+            </tr>
+        <tr>
+              <td class="profdata" style="background-color:#ffffff"
+                ><a href="callers.html#callers_2c8cf6f2f14397bade3e245a68d4c15e">3</a></td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+              <td class="profdata" style="background-color:#ffffff">  0.0000</td>
+                <td class="prof" style="width:700px;">
+                     /home/equant/bin/miniconda3/envs/open3d-0.13/lib/python3.8/argparse.py :
+                     1255 &#40;
+                     __init__&nbsp;&#41;</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="footer">
+    <p>
+    Generated by
+    <a href="http://pypi.python.org/pypi/pyprof2html/">pyprof2html</a>: 0.3.2
+    &nbsp;&nbsp;&nbsp;Powered by <a href="http://www.python.org/">Python</a
+    > and <a href="http://jinja.pocoo.org/2/">Jinja2</a>
+    </p>
+    </div>
+
+  </div>
+
+</body></html>
