@@ -1,4 +1,4 @@
-import os
+import os, pdb
 from posixpath import basename 
 import sys 
 import alphashape
@@ -146,14 +146,19 @@ def save_plant_array_to_ply(array, out_file):
 
     o3d.io.write_point_cloud(out_file, pcd)
     
-def generate_rotating_gif(array, gif_save_path, n_points=None, force_overwrite=False, scan_number=None):
+def generate_rotating_gif(points, gif_save_path, n_points=40000, force_overwrite=False, scan_number=None):
+
+    if n_points is None:
+        sampled_points = points
+    else:
+        sampled_points = points[ np.random.choice( points.shape[0], n_points ) ]
 
     fig = plt.figure(figsize=(9,9))
     ax = fig.add_subplot(111, projection='3d')
-    x = array[:,0]
-    y = array[:,1]
-    z = array[:,2]
-    # c = array[:,3]
+    x = sampled_points[:,0]
+    y = sampled_points[:,1]
+    z = sampled_points[:,2]
+    # c = sampled_points[:,3]
     cmap = 'Greens'
     ax.scatter(x, y, z,
                zdir='z',
@@ -228,7 +233,7 @@ def main():
     if len(dbscan_list) == 1:
         array = np.delete(labeled_pcd_array, 3, 1)
         save_plant_array_to_ply(array, out_file)
-        generate_rotating_gif(array=array, gif_save_path=gif_path)
+        generate_rotating_gif(points=array, gif_save_path=gif_path)
         return
         
     max_test_list = []
@@ -240,14 +245,14 @@ def main():
     if len(max_test_list) == 1:
         array = np.delete(np.asarray(max_test_list[0]), 3, 1)
         save_plant_array_to_ply(array, out_file)
-        generate_rotating_gif(array=array, gif_save_path=gif_path)
+        generate_rotating_gif(points=array, gif_save_path=gif_path)
         return
         
     shape_list = get_shapes(max_test_list)
     overlapped_array_list, overlapped_polygon_list = overlapped_shapes(shape_list)
     largest_sub_pcd = get_largest_pointcloud(overlapped_array_list)
     save_plant_array_to_ply(largest_sub_pcd, out_file)
-    generate_rotating_gif(array=largest_sub_pcd, gif_save_path=gif_path)
+    generate_rotating_gif(points=largest_sub_pcd, gif_save_path=gif_path)
 
 # run main ----------------------------------------------------------------------------------------------------
 if __name__ == '__main__':
