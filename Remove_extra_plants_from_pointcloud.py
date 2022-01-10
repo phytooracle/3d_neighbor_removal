@@ -233,7 +233,7 @@ def main():
     if len(dbscan_list) == 1:
         array = np.delete(labeled_pcd_array, 3, 1)
         save_plant_array_to_ply(array, out_file)
-        generate_rotating_gif(points=array, gif_save_path=gif_path)
+#         generate_rotating_gif(points=array, gif_save_path=gif_path)
         return
         
     max_test_list = []
@@ -245,14 +245,14 @@ def main():
     if len(max_test_list) == 1:
         array = np.delete(np.asarray(max_test_list[0]), 3, 1)
         save_plant_array_to_ply(array, out_file)
-        generate_rotating_gif(points=array, gif_save_path=gif_path)
+#         generate_rotating_gif(points=array, gif_save_path=gif_path)
         return
         
     shape_list = get_shapes(max_test_list)
     overlapped_array_list, overlapped_polygon_list = overlapped_shapes(shape_list)
     largest_sub_pcd = get_largest_pointcloud(overlapped_array_list)
     save_plant_array_to_ply(largest_sub_pcd, out_file)
-    generate_rotating_gif(points=largest_sub_pcd, gif_save_path=gif_path)
+#     generate_rotating_gif(points=largest_sub_pcd, gif_save_path=gif_path)
 
 # run main ----------------------------------------------------------------------------------------------------
 if __name__ == '__main__':
