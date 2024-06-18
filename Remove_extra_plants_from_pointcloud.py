@@ -209,7 +209,7 @@ def main():
 
     output_dir_init([data_output_dir, figure_output_dir])
 
-    pcd_path = os.path.join(data_output_dir, "segmentation_plant.ply")
+    pcd_path = os.path.join(data_output_dir, plant_name + "_no_soil_full.ply")
 
     out_file = os.path.join(data_output_dir, args.output_filename)
     gif_path = os.path.join(figure_output_dir, args.output_filename.replace(".ply", ".gif"))
