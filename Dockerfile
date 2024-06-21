@@ -33,7 +33,8 @@ RUN cd Python-3.9.5/ && ./configure --with-ensurepip=install && make && make ins
 RUN apt-get update
 RUN pip3 install -r requirements.txt
 # RUN python3.9 -m pip install https://storage.googleapis.com/open3d-releases-master/python-wheels/open3d-0.14.1+485cce8-cp39-cp39-manylinux_2_27_x86_64.whl
-RUN python3.9 -m pip install https://storage.googleapis.com/open3d-releases-master/python-wheels/open3d-0.14.1+74d6d4b-cp39-cp39-manylinux_2_27_x86_64.whl
+# RUN python3.9 -m pip install https://storage.googleapis.com/open3d-releases-master/python-wheels/open3d-0.14.1+74d6d4b-cp39-cp39-manylinux_2_27_x86_64.whl
+RUN python3.9 -m pip install https://github.com/isl-org/Open3D/releases/download/v0.14.1/open3d-0.14.1-cp39-cp39-manylinux_2_27_x86_64.whl
 RUN apt-get install -y locales && locale-gen en_US.UTF-8
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 
