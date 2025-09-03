@@ -36,5 +36,6 @@ RUN pip3 install -r requirements.txt
 RUN python3.9 -m pip install https://storage.googleapis.com/open3d-releases-master/python-wheels/open3d-0.14.1+74d6d4b-cp39-cp39-manylinux_2_27_x86_64.whl
 RUN apt-get install -y locales && locale-gen en_US.UTF-8
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
+ENV PYTHONPATH=/usr/local/lib/python3.9/site-packages:$PYTHONPATH
 
 ENTRYPOINT [ "/usr/local/bin/python3.9", "/opt/Remove_extra_plants_from_pointcloud.py" ]
